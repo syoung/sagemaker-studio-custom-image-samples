@@ -1,13 +1,13 @@
 {
-    "DomainId": "<domain-id>",
-    "DefaultUserSettings": {
-        "KernelGatewayAppSettings": {
-            "CustomImages": [
-                {
-                    "ImageName": "custom-r",
-                    "AppImageConfigName": "custom-r-image-config"
-                }
-            ]
-        }
-    }
+  "DomainId": "d-ikvgk5wwv2mo",
+  "DefaultUserSettings": {
+      "KernelGatewayAppSettings": {
+          "CustomImages": [
+              {
+                  "ImageName": "sagemaker-bioconductor-xcms",
+                  "AppImageConfigName": "custom-r-image-config"
+              }
+          ]
+      }
+  }
 }

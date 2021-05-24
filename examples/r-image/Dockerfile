@@ -55,7 +55,6 @@ RUN apt-get update && \
     unixodbc \
     unixodbc-dev \
     r-cran-rodbc \
-    gfortran \
     gcc && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p $CONDA_DIR && \
@@ -84,24 +83,28 @@ RUN cd /tmp && \
 
 # R packages and Python packages that are usable via "reticulate".
 RUN conda install --quiet --yes \
-    'r-base=4.0.0' \
-    'r-caret=6.*' \
-    'r-crayon=1.3*' \
-    'r-devtools=2.3*' \
-    'r-forecast=8.12*' \
-    'r-hexbin=1.28*' \
-    'r-htmltools=0.4*' \
-    'r-htmlwidgets=1.5*' \
-    'r-irkernel=1.1*' \
-    'r-rmarkdown=2.2*' \
-    'r-rodbc=1.3*' \
-    'r-rsqlite=2.2*' \
-    'r-shiny=1.4*' \
-    'r-tidyverse=1.3*' \
-    'unixodbc=2.3.*' \
-    'r-tidymodels=0.1*' \
-    'r-reticulate=1.*' \
+    'r-base=4.0.2' \
+    'r-caret' \
+    'r-crayon' \
+    'r-devtools' \
+    'r-forecast' \
+    'r-hexbin' \
+    'r-htmltools' \
+    'r-htmlwidgets' \
+    'r-irkernel' \
+    'r-rmarkdown' \
+    'r-rodbc' \
+    'r-rsqlite' \
+    'r-shiny' \
+    'r-tidyverse' \
+    'unixodbc' \
+    'r-tidymodels' \
+    'r-reticulate' \
     && \
+    conda install -c bioconda  bioconductor-xcms && \
+    conda install -c bioconda bioconductor-faahKO && \
+    conda install -c bioconda r-pheatmap && \
+    conda install -c bioconda r-pander && \
     pip install --quiet --no-cache-dir \
     'boto3>1.0<2.0' \
     'sagemaker>2.0<3.0' && \

@@ -1,0 +1,3 @@
+HTTP_PROXY=http://web.prod.proxy.cargill.com:4200
+HTTPS_PROXY=http://web.prod.proxy.cargill.com:4200
+ALL_PROXY=http://web.prod.proxy.cargill.com:4200
